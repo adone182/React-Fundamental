@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// parent components
 
-function App() {
+import React, { useState } from 'react';
+import Testing from './components/testing';
+
+const App = () => {
+  const  [getLimit , setLimit] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <center>
+      {getLimit}
+      <br/>
+      <button>Tambah Limit</button>
+      </center>
+     <Testing/>
+   </>
   );
 }
 
