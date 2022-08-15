@@ -1,21 +1,15 @@
-// parent components
+// Parent Component
 
-import React, { useState } from 'react';
-import Testing from './components/testing';
+import React from "react";
+import Albums from "./components/Albums/main.albums";
+import MainLayouts from "./components/Layouts/main.layout";
 
 const App = () => {
-  const  [getLimit , setLimit] = useState(1);
-
   return (
-   <>
-      <center>
-      {getLimit}
-      <br/>
-      <button>Tambah Limit</button>
-      </center>
-     <Testing/>
-   </>
+    <MainLayouts>
+      <Albums title="Image From API" description="Images Fetch API from Thrid Party"/>
+    </MainLayouts>
   );
-}
+};
 
 export default App;
